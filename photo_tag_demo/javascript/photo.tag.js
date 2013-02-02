@@ -12,6 +12,7 @@
             }
         }
     };
+    
     photoTags.initPhotoTagsCanvas = function() {
         jQuery(this).addClass("active");
         jQuery(this).siblings(".itooltip").fadeIn();
@@ -59,7 +60,7 @@ jQuery(document).ready(function() {
 
     jQuery(".init_photo_tag_canvas").toggle(
         photoTags.initPhotoTagsCanvas,
-        photoTags.initPhotoTagsCanvas
+        photoTags.hidePhotoTagsCanvas
     );
 
     jQuery(".photo_tag_canvas").hover(
