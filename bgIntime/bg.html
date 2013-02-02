@@ -1,73 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="utf-8">
-        <title>HTML5</title>
-        <script src="jquery.min.js"></script>
-        <style>
-        <!--
-        *{margin:0;padding:0}
-        body{
-            font-family: Georgia, Sans-serif;
-            font-weight: normal;
-            font-style: normal;
-            background: #13131e;
-            margin: 0px;
-            padding: 0px;
-            width: 100%;
-            height: 100%;
-            color: #727272;
-            z-index: -200;
-            position: absolute
-        }
-        .wrapper{position:absolute;width:100%;height:auto;padding:40px 0}
-        .content{width:90%;margin:0 auto;text-shadow:0 1px 1px #000}
-        h1{font-size:1000%;color:#fc0}
-        h2{font-size:200%;color:#fff}
-        #page_background{  
-            z-index: -100;
-            position:fixed;
-            width:100%;
-            height:100%;
-        }
-        -->
-        </style>
-    </head>
-    <body>
-    <div class="wrapper">
-        <div class="content">
-            <h1>Hello World</h1>
-            <h2>Show different background in different time.</h2>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <title>HTML5</title>
+    <script src="jquery.min.js"></script>
+    <style>
+    <!--
+    *{margin:0;padding:0}
+    body{
+        font-family: Georgia, Sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        background: #13131e;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        color: #727272;
+        z-index: -200;
+        position: absolute
+    }
+    .wrapper{position:absolute;width:100%;height:auto;padding:40px 0}
+    .content{width:90%;margin:0 auto;text-shadow:0 1px 1px #000}
+    h1{font-size:1000%;color:#fc0}
+    h2{font-size:200%;color:#fff}
+    #page_background{  
+        z-index: -100;
+        position:fixed;
+        width:100%;
+        height:100%;
+    }
+    -->
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <h1>Hello World</h1>
+        <h2>Show different background in different time.</h2>
     </div>
-    <div id="page_background"></div>
-    <script>
-    /*<![CDATA[*/
-        var D = new Date();
-        var currentHour = D.getHours();
-        var bgNum = '0';
-
-        if (currentHour >= 0 && currentHour < 3 ){
-            bgNum = '0';
-        } else if (currentHour >= 3 && currentHour < 6 ){
-            bgNum = '1';
-        } else if (currentHour >= 6 && currentHour < 9 ){
-            bgNum = '2';
-        } else if (currentHour >= 9 && currentHour < 12 ){
-            bgNum = '3';
-        } else if (currentHour >= 12 && currentHour < 15 ){
-            bgNum = '4';
-        } else if (currentHour >= 15 && currentHour < 18 ){
-            bgNum = '5';
-        } else if (currentHour >= 18 && currentHour < 21 ){
-            bgNum = '6';
-        } else if (currentHour >= 21 && currentHour < 23 ){
-            bgNum = '7';
-        }
-
-        var BgSRC = '<img src=bg_'+bgNum+'.jpg width=100% height=100%>';
-        $('#page_background').append(BgSRC);
-    /*]]>*/
-    </script>
-    </body>
+</div>
+<div id="page_background"></div>
+<script src="app.js"></script>
+<script>
+/*<![CDATA[*/
+app.show_different_bg();
+/*]]>*/
+</script>
+</body>
 </html>
