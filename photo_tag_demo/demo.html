@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>Photo Tag Demo</title>     
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <link href="javascript/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <script src="javascript/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+    <div class="wrapper">
+        <div class="photo_tag_container">
+            <img src="temp/londra.jpg" border="0" alt="">
+            <div class="itooltip">点击任意位置添加标签 <a title="我知道了,不再提示.">&times;</a></div>
+            <div class="init_photo_tag_canvas"><a>&plus;</a></div>
+            <div class="photo_tag_canvas"></div>
+            <div class="new_photo_tags_tabs hide" id="add_new_photo_tags">
+                <ul>
+                    <li id="first">照片</li>
+                    <li>人物</li>
+                    <li>语音</li>
+                    <li>商品</li>
+                    <li>地点</li>
+                    <li>标签</li>
+                    <li>视频</li>
+                    <li>评论</li>
+                    <li id="last">链接</li>
+                </ul>
+                <div class="new_photo_tags_tabs_content">111</div>
+                <div class="new_photo_tags_tabs_content">222</div>
+                <div class="new_photo_tags_tabs_content">333</div>
+                <div class="new_photo_tags_tabs_content">444</div>
+                <div class="new_photo_tags_tabs_content">555</div>
+                <div class="new_photo_tags_tabs_content">666</div>
+                <div class="new_photo_tags_tabs_content">777</div>
+                <div class="new_photo_tags_tabs_content">888</div>
+                <div class="new_photo_tags_tabs_content">999</div>
+                <div class="actions"><button class="sava_photo_tags">保存</button><button class="cancel_photo_tags">取消</button></div>
+            </div>
+            <div class="edit_photo_tab_types hide" id="edit_photo_tags">
+                编辑标签
+                <div class="actions"><button class="sava_photo_tags">保存</button><button class="cancel_photo_tags">取消</button></div>
+            </div>
+            <div class="photo_tag_marker" style="top: 259px; left: 126px;"><div class="inner">&#338</div></div>
+            <div class="photo_tag_marker" style="top: 195px; left: 368px;"><div class="inner">&#367</div></div>
+            <div class="photo_tag_marker" style="top: 142px; left: 475px;"><div class="inner">&#420</div></div>
+        </div>
+        <div class="iconlist">
+            <h2>图标说明</h2>
+            <div class="iconfont"><div class="inner">&#98</div><span>照片</span></div>
+            <div class="iconfont"><div class="inner">&#338</div><span>人物</span></div>
+            <div class="iconfont"><div class="inner">&#364</div><span>语音</span></div>
+            <div class="iconfont"><div class="inner">&#365</div><span>商品</span></div>
+            <div class="iconfont"><div class="inner">&#367</div><span>地点</span></div>
+            <div class="iconfont"><div class="inner">&#375</div><span>标签</span></div>
+            <div class="iconfont"><div class="inner">&#391</div><span>视频</span></div>
+            <div class="iconfont"><div class="inner">&#420</div><span>评论</span></div>
+            <div class="iconfont"><div class="inner">&#467</div><span>链接</span></div>
+        </div>
+    </div>
+    <script src="javascript/fancybox/jquery.fancybox.pack.js" charset="utf-8"></script>
+    <script src="javascript/photo.tag.js" charset="utf-8"></script>
+    </body>
+</html>

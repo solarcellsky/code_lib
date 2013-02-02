@@ -1,0 +1,230 @@
+*{margin: 0;padding: 0;list-style: none;}
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+     2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+     3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+*/
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 清除浮动 */
+.clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.clear{
+  *zoom: 1;
+}
+.hide{display:none}
+/*Reset End*/
+.wrapper {padding:100px 0;width:95%;margin:0 auto}
+.photo_tag_container {
+    background: #ccc;
+    width: 70%;
+    height: 450px;
+    position: relative;
+    overflow:hidden;
+    margin:0 0 10px;
+    float:left
+}
+.init_photo_tag_canvas{
+    display:none;
+    border: 1px solid #000;
+    background: #171717;
+    background: -webkit-gradient(linear, left top, left bottom, from(#323232), to(#171717));
+    background: -moz-linear-gradient(top,  #323232,  #171717);
+    width:36px;
+    height:30px;
+    line-height:30px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index:1001;
+    cursor:pointer;
+    opacity: .95;
+    filter: alpha(opacity=95);
+    border-top-right-radius: 5px;
+}
+.init_photo_tag_canvas a{
+    display:block;
+    width:36px;
+    height:30px;
+    background:url(images/sprite.png) no-repeat -292px 0;
+    text-indent:-99999px;
+    overflow:hidden
+}
+.init_photo_tag_canvas.active a{background-position: -256px 0}
+.photo_tag_container img{width:100%;height:100%;position:absolute;left:0;top:0;z-index:999}
+.photo_tag_marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    background: #000;
+    padding: 1px;
+    border-radius: 20px;
+    cursor:pointer;
+    text-align:center;
+    box-shadow:0 0 5px #000;
+    z-index:1002
+}
+.photo_tag_marker .inner {
+    height: 18px;
+    width: 18px;
+    line-height:18px;
+    border: 1px solid #fff;
+    float: left;
+    border-radius: 18px;
+    font-family:"uxiconfont";
+    font-size:12px;
+    font-style:normal;
+    color:#fff
+}
+.photo_tag_canvas{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+    cursor:crosshair;
+    background:transparent;
+    z-index:1000;
+}
+.itooltip {
+    color:#fff; 
+    display: none;
+    position: absolute;
+    width:170px;
+    height:24px;
+    line-height:24px;
+    text-align:center;
+    border: 1px solid #000;
+    background: #171717;
+    background: -webkit-gradient(linear, left top, left bottom, from(#323232), to(#171717));
+    background: -moz-linear-gradient(top,  #323232,  #171717);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323232',endColorstr='#171717',GradientType=0);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; 
+    border-radius: 3px;
+    white-space: nowrap;
+    left:10px;
+    top:10px;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    font-size:12px;
+    font-weight:700;
+    cursor:default;
+    z-index:1001
+}
+
+.iconlist{margin-left:73%}
+.iconlist h2{padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid #e0e0e0}
+.iconfont{
+    margin: 0 10px 10px 0;
+    width: 20px;
+    height: 20px;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    background: #000;
+    padding: 1px;
+    border-radius: 20px;
+    cursor:default;
+    box-shadow:0 0 5px #000;
+    text-align:center;
+    color:#fff;
+    position:relative
+}
+.iconfont .inner {
+    height: 18px;
+    width: 18px;
+    line-height:18px;
+    border: 1px solid #fff;
+    border-radius: 18px
+}
+.iconfont span{display:block;position:absolute;left:30px;top:2px;width:40px;color:#222}
+@font-face {font-family: 'uxiconfont';
+    src: url('font/uxiconfont.eot'); /* IE9*/
+    src: url('font/uxiconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('font/uxiconfont.woff') format('woff'), /* chrome、firefox */
+    url('font/uxiconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('font/uxiconfont.svg#svgFontName') format('svg'); /* iOS 4.1- */
+}
+.iconfont{font-family:"uxiconfont";font-size:12px;font-style:normal}
+
+.new_photo_tags_tabs{
+    background:#fff;
+    color: #444
+}
+.new_photo_tags_tabs .actions{padding:10px 0 0}
+.new_photo_tags_tabs ul{
+    border:1px solid #e0e0e0;
+    height:24px;
+    background: #f0f0f0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#eeeeee));
+    background: -moz-linear-gradient(top,  #f0f0f0,  #eeeeee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0',endColorstr='#eeeeee',GradientType=0);
+}
+.new_photo_tags_tabs ul li{
+    float:left;
+    color:#666;
+    text-align:center;
+    height:24px;
+    line-height:24px;
+    padding:0 10px;
+    cursor:pointer;
+    font-weight:700;
+    border-right:1px solid #e0e0e0
+}
+.new_photo_tags_tabs ul li#last{
+    border-right:none
+}
+.new_photo_tags_tabs ul li:hover{
+    background:#fff
+}
+.new_photo_tags_tabs .active{
+    background:#fff;
+    color:#000
+}
+.new_photo_tags_tabs_content{padding:15px;clear:both;border:1px solid #e0e0e0;border-top:none}
