@@ -129,7 +129,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     top:0;
     display:none;
     cursor:crosshair;
-    background:transparent;
+    background:url(images/fuck_ie_blank.gif);
     z-index:1000;
 }
 .itooltip {

@@ -1,11 +1,11 @@
 //colorEgg module
 (function(colorEgg) {
     var D = new Date();
-    colorEgg.show_different_bg = function(){
+    colorEgg.showDifferentBg = function(){
         var currentHour = D.getHours();
-        jQuery('#page_background').append('<img src=bg/bg_'+parseInt(currentHour/3)+'.jpg width=100% height=100%>');
+        jQuery('#page_background').html('<img src=bg/bg_'+parseInt(currentHour/3)+'.jpg width=100% height=100%>');
     };
-    colorEgg.show_currentDate = function(){
-        jQuery('time').append(D.toString());
+    colorEgg.showCurrentDate = function(){
+        jQuery('time').text(D.toString());
     };
 })(window.colorEgg = window.colorEgg || {});
