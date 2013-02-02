@@ -24,6 +24,7 @@
     .content{width:90%;margin:0 auto;text-shadow:0 1px 1px #000}
     h1{font-size:1000%;color:#fc0}
     h2{font-size:200%;color:#fff}
+    time{color:#fff}
     #page_background{  
         z-index: -100;
         position:fixed;
@@ -38,13 +39,15 @@
     <div class="content">
         <h1>Hello World</h1>
         <h2>Show different background image in different time.</h2>
+        <time></time>
     </div>
 </div>
 <div id="page_background"></div>
 <script src="app.js"></script>
 <script>
 /*<![CDATA[*/
-app.show_different_bg();
+colorEgg.show_different_bg();
+colorEgg.show_currentDate();
 /*]]>*/
 </script>
 </body>
