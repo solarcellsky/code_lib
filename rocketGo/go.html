@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+        <![endif]-->        
+        <style>
+            * {font-family: Lucida Sans, Arial, Helvetica, sans-serif;margin:0;padding:0}
+			body{height:1000px}
+			.rockets {
+				display: none;
+				position: fixed;
+				_position: absolute;
+				top: 70%;
+				_top: expression(document.documentElement.scrollTop+Math.round(document.documentElement.offsetHeight * .7)+"px");
+				right: 0;
+				width: 149px;
+				height: 249px;
+				background: url(rocket_button_up.png) no-repeat 0 0;
+				text-decoration: none;
+				cursor: pointer;
+				z-index: 1003;
+				outline: 0;
+			}
+			.rockkets_bg {
+				width: 149px;
+				height: 249px;
+				background: url(rocket_button_up.png) no-repeat -149px 0;
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+        </style>
+    </head>
+    <body>
+    <div href="javascript:;" class="rockets">
+		<a href="javascript:;" hidefocus="true"><div class="rockkets_bg"></div></a>
+	</div>
+	<script src="jquery.min.js" charset="utf-8"></script>
+	<script src="go.js" charset="utf-8"></script>
+    </body>
+</html>
