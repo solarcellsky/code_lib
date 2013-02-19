@@ -51,7 +51,7 @@
 
 #ip-container .bg{
     display: inline-block;
-    padding: 10px 10px 0px 10px ;
+    padding: 10px;
     background: #FAFAFA;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAYAAABLLYUHAAAAF0lEQVQIW2NkAIIPHz7MFBAQSGckjgMAl1UQBbKGQEAAAAAASUVORK5CYII=);
     color: rgb(20,20,20);
