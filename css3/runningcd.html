@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS3 Running Disk</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+        <![endif]-->        
+        <style>
+            .mscPlr{position:relative}
+            .rt {
+                -webkit-animation: run 9.5s infinite linear;
+                -moz-animation: run 9.5s infinite linear;
+                -ms-animation: run 9.5s infinite linear;
+                -o-animation: run 9.5s infinite linear;
+                animation: run 9.5s infinite linear;
+                -webkit-animation-play-state: running;
+                -moz-animation-play-state: running;
+                -ms-animation-play-state: running;
+                -o-animation-play-state: running;
+                animation-play-state: running;
+            }
+            .cv {
+                background: #e1e1e1 url(300.jpg) no-repeat scroll;
+                width: 300px;
+                height: 300px;
+                background-size: 300px 300px;
+                border-radius:300px
+            }
+            @-webkit-keyframes run
+            {
+                from
+                    {
+                    -webkit-transform:rotate(0deg);
+                    }
+                to
+                    {
+                    -webkit-transform:rotate(360deg);
+                    }
+            }
+        </style>
+    </head>
+    <body>
+    <div id="mscPlr" class="mscPlr">
+        <div id="rotateCD" class="cv rt"></div>
+    </div>
+    </body>
+</html>
