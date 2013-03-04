@@ -87,12 +87,25 @@
     </head>
     <body>
     <div class="wrapper">
+        <p>
+            You can use mapSVG for: <span class="label label-important">country maps</span> <span class="label label-success">city maps</span> <span class="label label-info">subway maps</span> <span class="label label-warning">floorplans</span>
+        </p>
         <div class="map-world">
             <h2>WORLD MAP</h2>
+            <div class="alert alert-info">
+                    Try to click / move mouse pointer over colored countries and markers.
+            </div>
             <div id="mapsvg-world"></div>
         </div>
         <div class="map-usa">
             <h2>USA MAP</h2>
+            <div class="alert">Obviously USA map is most demanded, so it's included in the plugin. <br>
+            But also I was often asked for a map of some state with its counties - so finally <strong>detailed maps of each state</strong> with <strong>all counties</strong> were added.<br>
+            Each state map is in separate .svg file.
+            </div>
+            <div class="alert alert-info">
+                Click on any state to load detailed map with counties.
+            </div>
             <div class="row" style="overflow: hidden;">
 
                 <div class="span6">
@@ -120,7 +133,7 @@
 
                        $('#mapsvg-states').mapSvg({
                             source : 'maps/counties/'+file,
-                            //responsive: 1,
+                            responsive: 1,
                             colors: {stroke: '#fff'},
                             width: $('#mapsvg-usa').width(),
                             height: $('#mapsvg-usa').height(),
@@ -147,6 +160,12 @@
         </div>
         <div class="map-other">
             <h2>Other SVG maps included in mapSVG plugin</h2>
+            <div class="alert">
+                Remember that <strong>you can add your own .SVG maps</strong>. There are many free SVG maps available for downloading from Wikipedia storage. Or you can draw your own map / floorplan in vector editor and save it as ".svg" file.
+            </div>
+            <div class="alert alert-info">
+                ↓ Select any map from menu
+            </div>
             <div class="row" style="overflow: hidden;">
 
                 <div class="span3">
