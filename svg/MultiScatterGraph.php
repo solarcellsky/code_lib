@@ -22,15 +22,39 @@
         'best_fit_dash' => '2,2', 
         'best_fit_colour' => array('red', 'blue', 'green', 'orange')
     );
-    $values = array( 
-        array(1,20), 
-        array(1,50), 
-        array(3,40), 
-        array(4,30), 
-        array(5,60), 
-        array(7,80), 
-        array(7,40), 
-        array(9,70) 
+    $values =array(
+        array( 
+            array(1,10),
+            array(3,10), 
+            array(4,10), 
+            array(5,10), 
+            array(7,10), 
+            array(9,10) 
+        ),
+        array( 
+            array(1,20),
+            array(3,20), 
+            array(4,20), 
+            array(5,20), 
+            array(7,20), 
+            array(9,20) 
+        ),
+        array( 
+            array(1,30),
+            array(3,25), 
+            array(4,40), 
+            array(5,45), 
+            array(7,30), 
+            array(9,30) 
+        ),
+        array( 
+            array(1,50),
+            array(3,15), 
+            array(4,45), 
+            array(5,60), 
+            array(7,65), 
+            array(9,55) 
+        )
     );
     $graph = new SVGGraph($width, $height, $settings);
     $graph->Values($values);

@@ -5,8 +5,7 @@
         'back_colour' => '#eee', 
         'stroke_colour' => '#000', 
         'back_stroke_width' => 0, 
-        'back_stroke_colour' => '#eee', 
-        'back_image' => 'images/svgbg.png', 
+        'back_stroke_colour' => '#000',
         'axis_colour' => '#333', 
         'axis_overlap' => 2, 
         'axis_font' => 'Georgia', 
@@ -20,7 +19,11 @@
         'show_labels' => true, 
         'show_label_amount' => true, 
         'label_font' => 'Georgia',
-        'label_font_size' => '11', 
+        'label_font_size' => 40,
+        'label_fade_in_speed' => 30,
+        'label_fade_out_speed' => 15,
+        'depth' => 50,
+        'start_angle' => 30,
         'sort' => false
     );
     $values = array(
@@ -49,5 +52,5 @@
     $graph->colours = $colours;
     $graph->Values($values);
     $graph->Links($links); 
-    $graph->Render('PieGraph');
+    $graph->Render('Pie3DGraph');
 ?>
