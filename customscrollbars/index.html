@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Custom Scrollbars with jQuery</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	 
+	<script src="jquery.mousewheel.js"></script>
+	<script src="jquery-ui-draggable.js"></script>
+	 
+<script>
+
+$(document).ready(function(){
+	
+	$('body').prepend('<div id="scrollbar-track"><div id="scrollbar"></div></div>');
+	
+	function scrollBar(){
+	
+		var viewportHeight = $(window).height();
+		var docuHeight = $(document).height();
+		
+		var trackHeight = $('#scrollbar-track').height();
+		
+		var scrollbarHeight = (viewportHeight/docuHeight)*trackHeight;
+		
+		$('#scrollbar').height(scrollbarHeight);
+		
+		$('#scrollbar').draggable({
+			axis: 'y',
+			containment: 'parent',
+			drag: function() {
+				var scrollbarTop = parseInt($(this).css('top'));
+				
+				var scrollTopNew = (scrollbarTop/(trackHeight))*docuHeight;
+				
+				$(window).scrollTop(scrollTopNew);
+				
+			}
+		});
+		
+		$("body").bind("mousewheel", function (event, delta) {
+			
+			var scrollTop = $(window).scrollTop();
+			var scrollTopNew = scrollTop - (delta * 40);
+			
+			$(window).scrollTop(scrollTopNew);
+			
+			var scrollbarTop = ($(window).scrollTop()/docuHeight)*trackHeight;
+		
+			$('#scrollbar').css({
+				top: scrollbarTop
+			});
+		});
+	
+	}
+	
+	scrollBar();
+	
+	$(window).resize(function(){
+		scrollBar();
+	});
+	
+	
+});
+
+</script>
+	
+</head>
+<body>
+
+<section id="main">
+
+<p>
+Lorem ipsum dolor sit amet, christus eum ego. Rhenum ibat est amet consensit cellula filia in lucem. Maria non dum est Apollonius eius sed quod una litus ostendam Apollonio dares. Actum in rei civibus nescis admonente iustum ait in deinde duas particularis ad quia ad per dicis. Stans sed quod una Christi iube es est cum, athenagorae principio intus huius domus ad quia quod tamen adnuente rediens eam ad per. Quos essem rogo cum suam non ait mea in rei sensibilium acciperem. Corripit ars tolle Adfertur guttae sapientiae decubuerat. Inquisivi ecce habitu rubor virginitatem sunt antecedente tuus desiderio sic ut libertatem adhuc. Inter autem nobiscum paulo aureos fecit per accipere, dicis Deducitur potest flens praemio litore iunctionem quae. Domini in lucem genero in rei finibus veteres hoc! Equidem deceptum in deinde cepit roseo ruens sed eu fugiens laudo in.
+</p>
+<p>
+Lugens quia iuvenis eum istam provoces Athenagora eius sed dominum oculos ne a civitas iter. Patriam Dianae non solutionem inveni quem suis alteri formam speciosam at at eius ad quia illum decidat quam cara patrem! Habes prima inrumpit dic hoc ambulare dolor invenerit, mytilenam Descendi eam in rei finibus veteres hoc. Inquisivi ecce prima substantiae Apollonius in deinde duas formis ei quoque non solutionem innocentem vis! Ait mea ego dum miror diligere quem est se in modo genito in. Adiuro me naufragus qui enim, unam emanabat cum obiectum ait. Miscetur vulnus fertur ardeat in modo genito in fuerat est se ad per animum est amet amet Cur meae. Antiochia videns de tuae illa caelum ad suis. Peregrini in lucem concitaverunt in rei finibus veteres hoc contra serpentibus isto. Post petiit materia amicis filia dedit beneficio ad quia ei. Accedens est cum obiectum est in fuerat se est cum suam vidit Dionysiadi me in. Eum est amet constanter approximavit te in lucem exitum vivit. Se vero non solutionem ascendens sed eu fugiens laudo misera haec vidit ad quia. Impietatem die audi discipuli Tyrius tu mihi Tyrum reverteretur ad nomine.
+</p>
+<p>
+Laetare quod non solutionem invenerunt ita in. Abstulit meis dolor ad per sanctus ait. Probo artium studiose rosa ad per animum pares terris restituit. Meam ad quia iuvenis omnia bono quomodo possum es. Modum cura supponere ipsa Invitamus me! Erige me in deinde vero quo sanctis oravit. Antioche in fuerat eum ego dum miror puella est se ad nomine Maria non ait mea ego esse haec. Atqui plurium venenosamque serpentium ne civitatis civium currebant in, nescimus de me in deinde cupis hominem. Rogo ultimum favente his domino ab ornabo in modo invenit quasi plena violatam. Mutilenae ratio omnes deo adiuves finem. Credo puella mihi quidditas tuo dolor virgo permitte a civitas ad nomine Maria non ait est amet amet amet consensit cellula rei exultant deo. Maria cum unde non dum est amet consensit cellula filia puella. Ascendi in lucem exitum atque bona dei fundamus magister. Thebaeorum in fuerat eum est amet amet constanter determinatio debitis torporis quin.
+</p>
+<p>
+Dicite enim formam se est in! Ardalio nos filiae gloriam virginis provolutus volo lacrimis colligantes amarissimo formas. Secundis est in modo ad suis alteri si non solutionem invenisti naufragus ferro conparuit de. Ni fluctus evasit dic ego illum Apollonii appropinquat tation ulterius a his e contrarius haec vidit Dionysiadi me in. Videns sed quod eam sed quod una Christi in lucem in fuerat accidens suos exteriores. Tantus puella sed haec aliquam habet comam apodixin mei in fuerat est se sed dominum sit in. Ephesum iube creasti hoc ait Cumque materia amicis in modo cavendum es ego dum est Apollonius ut a. Accede meae ad quia ad per te in rei completo litus vita Apolloni figitur acquievit. Etiam corpusculum subito animal irruit in, primam qui enim est in deinde plectrum anni ipsa Invitamus me.
+</p>
+<p>
+Puto suam in lucem genero in fuerat accidens suos exteriores iuvenis eum in fuerat eum ego Pentapolim Cyrenaeorum. Nescimus de me naufragus habuisti sit in! Pater ostendit qui non ait Cumque materia eam eos. Litus sua Cumque persequatur sic vero cum suam ad per dicis filiam in lucem in. Horreo Athenagora eius non solutionem invenisti naufragus ait mea, unam emanabat cum autem illud huius domus respexit est amet coram regis fine omnino vero cum. Habet vero quo accumsan in rei finibus veteres hoc contra me. Permansit in lucem in deinde cupis ei Taliarchum. Ite in modo ad suis alteri si. Ecce codicellis desinit sestertia habeatis Apollonio sed dominum depressit filia navem causa alia qui auri. Sed eu fides se est amet coram regis suam! Quantum ait regem consolatus dum est se sed dominum depressit filia puella ut diem finito convocatis ad per. Ubi diceret modiorum fudit animo resignasset iubet contremuit in, spongia non solutionem inveni in rei sensibilium iussit divisit calvus dolor invenerit. Thebaeorum in rei completo litus sua in fuerat est in. Mutilenae ea communia ei quoque sed quod eam in, fige omnium ad quia ei sed eu fides Concordi fabricata ait. Iacentem substantiales statim iuxta quia iuvenis ut libertatem petitiones, adfertur guttae sapientiae ducitur multa confert eam sed.
+</p>
+
+</section>
+
+
+</body>
+</html>
