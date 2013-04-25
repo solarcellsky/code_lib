@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>Google Glass Font</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+
+        @font-face {
+            font-family:"google-glass";
+            src:url("google-glass.eot?#iefix") format("embedded-opentype"),url("google-glass.woff") format("woff"),url("google-glass.ttf") format("truetype"),url("google-glass.svg#google-glass") format("svg");
+            font-weight:normal;
+            font-style:normal
+        }
+        h1{
+            font-weight: 100;
+            text-align: center;
+            visibility: hidden;
+            overflow: visible;
+            margin:0;
+            padding:50px
+        }
+        h1:before{
+            content: "\f109";
+            font-size: 6.5em;
+            font-family: "google-glass";
+            visibility: visible;
+            -webkit-font-smoothing: antialiased
+        }
+        </style>
+    </head>
+    <body>
+    <h1>Google Glass</h1>
+    </body>
+</html>
+
