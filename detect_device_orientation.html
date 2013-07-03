@@ -1,0 +1,52 @@
+
+<html>
+	<head>
+		<title>Rotation Example</title>
+		<style type="text/css">
+			#container {
+				position: relative;
+				height: 97%;
+			}
+			#left {
+				background-color: red;
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			#right {
+				background-color: blue;
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				updateDisplay(null);
+				$(window).on('orientationchange',updateDisplay);
+			});
+			
+			function updateDisplay(event){
+				if(Math.abs(window.orientation) === 90){
+					$('#debug').html("it's now landscape");
+					$('#left').animate({'width':'25%'},500);
+					$('#right').animate({'width':'75%'},500);
+				
+				}
+				else{
+					$('#debug').html("it's now portrait");
+					$('#right').animate({'width':'50%'},500);
+					$('#left').animate({'width':'50%'},500);					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="debug"></div>
+		<div id="container">
+			<div id="left">&nbsp;</div>
+			<div id="right">&nbsp;</div>
+		</div>
+	</body>
+</html>
