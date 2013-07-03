@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+        <![endif]-->
+		<script src="jquery.min.js" charset="utf-8"></script>
+		<script>
+		/*<![CDATA[*/
+		jQuery(document).ready(function() {
+		    var newDiv= $('<div/>', { id: 'foo', class: 'tclose'});
+			newDiv.appendTo('body');
+			newDiv.html('<h1>Hello World</h1>');
+		});
+		/*]]>*/
+		</script>
+    </head>
+    <body>
+    </body>
+</html>
