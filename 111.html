@@ -1,0 +1,53 @@
+
+<html>
+	<head>
+		<title>Rotation Example</title>
+		<style type="text/css">
+			#container {
+				position: relative;
+				height: 97%;
+			}
+			#left {
+				background-color: red;
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			#right {
+				background-color: blue;
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			var w = window,
+				d = document,
+				e = d.documentElement,
+				g = d.getElementsByTagName('body')[0],
+				x = w.innerWidth || e.clientWidth || g.clientWidth,
+				y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+			$(window).on('orientationchange',function() {
+				if(Math.abs(window.orientation) === 90){
+					x = w.innerWidth || e.clientWidth || g.clientWidth;
+					$('#debug').text(x)
+				}
+				else{
+					y = w.innerHeight || e.clientHeight || g.clientHeight;
+					x = y;
+					$('#debug').text(x)					
+				}
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="debug"></div>
+		<div id="container">
+			<div id="left">&nbsp;</div>
+			<div id="right">&nbsp;</div>
+		</div>
+	</body>
+</html>
