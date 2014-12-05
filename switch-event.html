@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <input type="button" id="btn" name="btn" value="BUTTON" />
+
+    <a href="#" id="aa">aa</a>
+    <p id="pndbtnReduce">----</p>
+    <p id="pndbtnAdd">+++</p>
+    <script>
+    document.addEventListener("click", function(evt) {
+        var target = evt.target;
+
+        switch (target.id) {
+
+            case "btn":
+                console.log(target);
+                alert("button");
+
+                break;
+
+            case "aa":
+
+                alert("a");
+
+                break;
+            case 'pndbtnReduce':
+                console.log(target.id);
+                break;
+            case 'pndbtnAdd':
+                console.log(target.id);
+                break;
+
+        }
+
+    }, false);
+    </script>
+
+</body>
+
+</html>
