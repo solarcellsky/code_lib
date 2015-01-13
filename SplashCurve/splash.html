@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Carp and The Seagull</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="og:site_name" content="The Carp and the Seagull">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://thecarpandtheseagull.thecreatorsproject.com/">
+    <meta property="og:title" content="The Carp and The Seagull">
+    <meta property="og:image" content="http://thecarpandtheseagull.thecreatorsproject.com/img/share/thumbnail.jpg">
+    <meta property="og:description" content="The Carp and The Seagull, An interactive short film by Evan Boehm.">
+    <meta name="description" content="The Carp and The Seagull, An interactive short film by Evan Boehm.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload="start();" class="splash">
+    <script src="Detector.js"></script>
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="three.min.js"></script>
+    <script src="Splash.js"></script>
+    <script id="oceanSurfaceVert" type="x-shader/x-vertex">
+    
+        varying vec3 v_objCoor;
+
+        void main() {
+
+            v_objCoor = position;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+    </script>
+    
+    <script id="oceanSurfaceFrag" type="x-shader/x-fragment">
+        uniform vec3 u_color;
+        varying vec3 v_objCoor;
+
+        float remap (float value, float initStart, float initEnd, float finalStart, float finalEnd)
+        {
+            float mapped = (( (value - initStart) *(finalEnd - finalStart) ) / (initEnd- initStart)) + finalStart;
+            return mapped;
+        }
+
+        void main() {
+            vec3 cameraPos = vec3(-338.0, -48.0, 2000.0);
+            float border = -100.0;
+
+            float alpha = remap(v_objCoor.y+border, 0.0, cameraPos.z*3.0, 0.0, 1.0);
+            float red = remap(v_objCoor.z, -500.0, 500.0, 0.8, 1.0);
+            float green = remap(v_objCoor.z, -500.0, 500.0, 0.8, 1.0);
+            
+            gl_FragColor=vec4(red, green,248.0/256.0, alpha);
+            
+        }
+    </script>   
+    <script src="retina.js"></script>
+
+</body>
+
+</html>
