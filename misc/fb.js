@@ -3,6 +3,7 @@
  * @authors Your Name (you@example.org)
  * @date    2015-04-21 17:00:05
  * @version $Id$
+ * n > 40 时代码执行明显变慢
  */
 function fabonacci(n) {
     if (n === 0) {
