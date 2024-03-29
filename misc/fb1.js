@@ -3,6 +3,9 @@
  * @authors Your Name (you@example.org)
  * @date    2015-04-21 17:02:17
  * @version $Id$
+ * 能显示的最大数 n = 1476
+ * 代码能执行的最大数 n = 8362
+ * n > 8362 报错 Maximum call stack size exceeded
  */
 
 var cache = {
